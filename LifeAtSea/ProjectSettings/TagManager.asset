@@ -18,7 +18,7 @@ TagManager:
   - 
   - 
   - boat
-  - 
+  - UI
   - 
   - 
   - 
@@ -42,12 +42,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: boat
+  - name: Background
     uniqueID: 700837661
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: background
+  - name: UI
     uniqueID: 2704420285
     locked: 0

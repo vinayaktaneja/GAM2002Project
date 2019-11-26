@@ -21,7 +21,9 @@ public class HookMovement : MonoBehaviour
     private bool moveDown;
 
     //For line renderer
-     private RopeRenderer ropeRenderer;
+    private RopeRenderer ropeRenderer;
+
+
 
     void Awake()
     {
@@ -44,8 +46,8 @@ public class HookMovement : MonoBehaviour
     void Update()
     {
         Rotate();
-        GetInput();
         MoveRope();
+        //GetInput();
     }
 
     void Rotate()
@@ -74,54 +76,54 @@ public class HookMovement : MonoBehaviour
         }
     }
 
-    void GetInput()
+    public void GetInput()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
+        
             if (canRotate)
             {
                 canRotate = false;
                 moveDown = true;
             }
-        }
+        
     }
-
-    void MoveRope()
-    {
-        if (canRotate)
-            return;
-
-        if (!canRotate)
+        void MoveRope()
         {
-            Vector3 temp = transform.position;
+            if (canRotate)
+                return;
 
-            if (moveDown)
+            if (!canRotate)
             {
-                temp -= transform.up * Time.deltaTime * move_Speed;
-            }
-            else
-            {
-                temp += transform.up * Time.deltaTime * move_Speed;
-            }
+                Vector3 temp = transform.position;
 
-            transform.position = temp;
+                if (moveDown)
+                {
+                    temp -= transform.up * Time.deltaTime * move_Speed;
+                }
+                else
+                {
+                    temp += transform.up * Time.deltaTime * move_Speed;
+                }
 
-            if(temp.y <= min_Y)
-            {
-                moveDown = false;
-            }
-            if (temp.y >= initial_Y)
-            {
-                canRotate = true;
-                ropeRenderer.RenderLine(temp, false);
-                move_Speed = initial_Move_Speed;
-            }
+                transform.position = temp;
 
-            ropeRenderer.RenderLine(temp, true);
+                if (temp.y <= min_Y)
+                {
+                    moveDown = false;
+                }
+                if (temp.y >= initial_Y)
+                {
+                    canRotate = true;
+                    ropeRenderer.RenderLine(temp, false);
+                    move_Speed = initial_Move_Speed;
+                }
+
+                ropeRenderer.RenderLine(temp, true);
+            }
+        }
+
+        public void HookAttachedItem()
+        {
+            moveDown = false;
         }
     }
-    public void HookAttachedItem()
-    {
-        moveDown = false;
-    }
-}
+
