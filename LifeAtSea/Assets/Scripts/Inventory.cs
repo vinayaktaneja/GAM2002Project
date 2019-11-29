@@ -51,7 +51,7 @@ public class Inventory : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "LargeFish")
+        if (other.tag == "LargeFish" || other.tag == "MediumFish" || other.tag == "SmallFish")
         {
             GameObject itemPickedUp = other.gameObject;
             ItemInventory item = itemPickedUp.GetComponent<ItemInventory>();
