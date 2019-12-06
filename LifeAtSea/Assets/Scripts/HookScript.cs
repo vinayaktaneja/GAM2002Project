@@ -20,8 +20,10 @@ public class HookScript : MonoBehaviour
         {
             itemAttached = true;
 
+            target.transform.parent = null;
             target.transform.parent = itemHolder;
             target.transform.position = itemHolder.position;
+            Debug.LogWarning("IM A HOOOKER AND IM HOOKING A FISH CALLED!!:" + target.name);
 
             hookMovement.HookAttachedItem();
 

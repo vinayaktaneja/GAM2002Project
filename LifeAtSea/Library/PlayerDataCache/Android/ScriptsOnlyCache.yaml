@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - DestroyAnimation
     - FishButton
     - HookMovement
     - HookScript
@@ -10,11 +11,15 @@ ScriptsOnlyBuild:
     - PanelOpener
     - RopeRenderer
     - Slot
+    - SpawnFish
+    - StopAnimation
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -48,42 +53,54 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 60
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 9674}
     - Class: 114
-      Script: {instanceID: 9724}
+      Script: {instanceID: 9690}
     - Class: 114
-      Script: {instanceID: 9832}
+      Script: {instanceID: 9726}
     - Class: 114
-      Script: {instanceID: 9872}
+      Script: {instanceID: 9834}
     - Class: 114
-      Script: {instanceID: 9922}
+      Script: {instanceID: 9874}
     - Class: 114
-      Script: {instanceID: 10240}
+      Script: {instanceID: 9924}
     - Class: 114
-      Script: {instanceID: 10252}
+      Script: {instanceID: 10242}
     - Class: 114
-      Script: {instanceID: 10478}
+      Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10600}
+      Script: {instanceID: 10286}
     - Class: 114
-      Script: {instanceID: 10644}
+      Script: {instanceID: 10482}
     - Class: 114
-      Script: {instanceID: 11064}
+      Script: {instanceID: 10604}
     - Class: 114
-      Script: {instanceID: 11296}
+      Script: {instanceID: 10648}
     - Class: 114
-      Script: {instanceID: 11344}
+      Script: {instanceID: 10756}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11068}
     - Class: 114
-      Script: {instanceID: 11468}
+      Script: {instanceID: 11300}
+    - Class: 114
+      Script: {instanceID: 11348}
+    - Class: 114
+      Script: {instanceID: 11422}
     - Class: 114
       Script: {instanceID: 11472}
+    - Class: 114
+      Script: {instanceID: 11476}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -122,19 +139,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9674}
     - Class: 114
-      Script: {instanceID: 9832}
+      Script: {instanceID: 9834}
     - Class: 114
-      Script: {instanceID: 9872}
+      Script: {instanceID: 9874}
     - Class: 114
-      Script: {instanceID: 10252}
+      Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10600}
+      Script: {instanceID: 10604}
     - Class: 114
-      Script: {instanceID: 10980}
+      Script: {instanceID: 10984}
     - Class: 114
-      Script: {instanceID: 11064}
+      Script: {instanceID: 11068}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11422}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -158,6 +175,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DestroyAnimation
   - hash:
       serializedVersion: 2
       Hash: 3c08375166df118bd1801438fc36b92f
@@ -340,6 +363,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 0c9a05dba8fa3c855d44a11814f06e0e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnFish
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -421,7 +450,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: TagManager
+    className: StopAnimation
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -630,4 +659,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Surface.unity
   - Assets/Scenes/Level01.unity
-  playerPath: D:/Projects/GAM2002Project/LifeAtSea/test13.apk
+  playerPath: D:/Projects/GAM2002Project/LifeAtSea/test17.apk
