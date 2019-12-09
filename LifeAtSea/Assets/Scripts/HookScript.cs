@@ -8,6 +8,7 @@ public class HookScript : MonoBehaviour
     private Transform itemHolder;
     private bool itemAttached;
     private HookMovement hookMovement;
+    public bool hookFish = false;
 
     private void Awake()
     {
@@ -16,20 +17,24 @@ public class HookScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D target)
     {
-        if (target.tag == "LargeFish" || target.tag == "MediumFish" || target.tag == "SmallFish")
+        if (hookFish == false)
         {
-            itemAttached = true;
+            if (target.tag == "LargeFish" || target.tag == "MediumFish" || target.tag == "SmallFish")
+            {
+                itemAttached = true;
 
-            target.transform.parent = null;
-            target.transform.parent = itemHolder;
-            target.transform.position = itemHolder.position;
-            Debug.LogWarning("IM A HOOOKER AND IM HOOKING A FISH CALLED!!:" + target.name);
+                target.transform.parent = null;
+                target.transform.parent = itemHolder;
+                target.transform.position = itemHolder.position;
+                hookFish = true;
+                Debug.LogWarning("IM A HOOOKER AND IM HOOKING A FISH CALLED!!:" + target.name);
 
-            hookMovement.HookAttachedItem();
+                hookMovement.HookAttachedItem();
 
-            hookMovement.move_Speed = target.GetComponent<ItemScript>().hook_Speed;
+                hookMovement.move_Speed = target.GetComponent<ItemScript>().hook_Speed;
 
-            
+
+            }
         }
     }
 }

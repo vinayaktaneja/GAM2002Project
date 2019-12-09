@@ -10,7 +10,7 @@ public class HookMovement : MonoBehaviour
 
     private float rotate_Angle;
     private bool rotate_Right;
-    private bool canRotate;
+    public bool canRotate;
 
     public float move_Speed = 3f;
     private float initial_Move_Speed;
@@ -79,7 +79,7 @@ public class HookMovement : MonoBehaviour
     public void GetInput()
     {
         
-            if (canRotate)
+            if (canRotate && GameObject.Find("InventoryButton").GetComponent<PanelOpener>().invOpened == false)
             {
                 canRotate = false;
                 moveDown = true;
@@ -115,6 +115,8 @@ public class HookMovement : MonoBehaviour
                     canRotate = true;
                     ropeRenderer.RenderLine(temp, false);
                     move_Speed = initial_Move_Speed;
+                    GameObject.Find("hook").GetComponent<HookScript>().hookFish = false;
+
                 }
 
                 ropeRenderer.RenderLine(temp, true);

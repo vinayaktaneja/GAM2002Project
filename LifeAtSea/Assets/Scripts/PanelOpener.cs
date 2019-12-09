@@ -6,15 +6,18 @@ public class PanelOpener : MonoBehaviour
 {
     public GameObject Panel;
     public GameObject inventory;
+    public bool invOpened = false;
 
     public void OpenInventory()
     {
         if (inventory != null)
         {
-            bool isActive = Panel.activeSelf;
-
-            Panel.SetActive(!isActive);
-
+            if (GameObject.Find("hookRope").GetComponent<HookMovement>().canRotate == true)
+            {
+                bool isActive = Panel.activeSelf;
+                invOpened = !invOpened;
+                Panel.SetActive(!isActive);
+            }
         }
     }
 

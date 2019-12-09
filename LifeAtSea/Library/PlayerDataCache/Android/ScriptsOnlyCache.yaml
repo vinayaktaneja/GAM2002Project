@@ -16,10 +16,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -56,6 +54,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -339,7 +341,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: cdb87f44759a17ab29776b062ad7242c
+      Hash: faa8d0e7c1ea340dfeb8e586d14eae8d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PanelOpener
@@ -543,7 +545,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 66e314cd6e970bbfd4251db963467fb7
+      Hash: 29613763fadffe272dee860ae054fe36
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HookScript
@@ -561,7 +563,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 302c3d3b8673fc9ffb9fe02ec3c4c5a7
+      Hash: 2c60836711b74aff90da3f364b51bd2d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HookMovement
@@ -659,4 +661,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Surface.unity
   - Assets/Scenes/Level01.unity
-  playerPath: D:/Projects/GAM2002Project/LifeAtSea/test17.apk
+  playerPath: D:/Projects/GAM2002Project/LifeAtSea/test19.apk
